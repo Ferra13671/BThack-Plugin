@@ -42,7 +42,8 @@ dependencies {
     //Without this shit, weird stuff happens with running the client in the plugin creation environment.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    implementation files("lib/BThack-1.20.4-fabric-1.0-all.jar")   //Why does the baritone from BThack not want to initialize?
+    implementation files("lib/BThack-1.20.4-fabric-1.1-all.jar")   //Why does the baritone from BThack not want to initialize?
+   
 
     //Use this if you want your plugin to use baritone
     //modImplementation "meteordevelopment:baritone:${project.baritone_version}-SNAPSHOT"
@@ -75,6 +76,10 @@ java {
         toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
     }
     withSourcesJar()
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/bthackplugin.accesswidener")
 }
 
 jar {
