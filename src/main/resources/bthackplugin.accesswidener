@@ -1,0 +1,4 @@
+accessWidener	v1	named
+
+#PersistentProjectileEntity
+accessible   field  net/minecraft/entity/projectile/PersistentProjectileEntity inGround Z

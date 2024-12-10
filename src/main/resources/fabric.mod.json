@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "bthack_plugin",
+  "version": "1.0",
+  "name": "BThack Plugin",
+  "description": "Example plugin for BThack client.",
+  "authors": [],
+  "contact": {
+    "repo": ""
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+    ],
+    "main": [
+    ],
+    "bthack": [
+      "com.ferra13671.BThackPlugin.BThackPlugin"
+    ]
+  },
+  "mixins": [
+    "bthack_plugin.mixins.json"
+  ],
+  "accessWidener" : "bthackplugin.accesswidener",
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
