@@ -38,7 +38,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "maven.modrinth:satin-api:${satin_version}"
 
-    implementation files("lib/BThack-1.21.1-fabric-1.5-all.jar")
+    implementation files("lib/BThack-1.21.1-fabric-1.6-all.jar")
 
 
 

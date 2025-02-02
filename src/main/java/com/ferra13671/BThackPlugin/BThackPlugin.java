@@ -3,7 +3,6 @@ package com.ferra13671.BThackPlugin;
 import com.ferra13671.BThack.api.Interfaces.Mc;
 import com.ferra13671.BThack.api.Plugin.Plugin;
 import com.ferra13671.BThack.api.Plugin.PluginUtils;
-import com.ferra13671.BThackPlugin.Modules.ExampleModule;
 
 import java.util.Arrays;
 
@@ -23,10 +22,10 @@ public class BThackPlugin extends Plugin implements Mc {
 
     @Override
     public void onInitModules() {
-        PluginUtils.addPluginModules(Arrays.asList(new ExampleModule()));
-        //PluginUtils.addPluginModules(Arrays.asList(
-        //                                                    Here you can add your plugin modules to client.
-        //));
+        //Here you can add your plugin modules to client.
+        PluginUtils.addPluginModules(Arrays.asList(
+                new ExampleModule()
+        ));
     }
 
     @Override
@@ -38,9 +37,20 @@ public class BThackPlugin extends Plugin implements Mc {
 
     @Override
     public void onInitCommands() {
-        //PluginUtils.addPluginCommands(Arrays.asList(
-        //                                                    Here you can add your commands to client.
-        //));
+        //Here you can add your commands to client.
+        PluginUtils.addPluginCommands(Arrays.asList(
+                new ExampleCommand()
+        ));
+    }
+
+    @Override
+    public void onInitDataLists() {
+        //Here you can load your data lists to client.
+    }
+
+    @Override
+    public void onInitCustomCategories() {
+        //Here you can load your clickGui categories to client.
     }
 
     @Override
