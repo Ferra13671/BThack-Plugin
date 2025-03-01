@@ -1,6 +1,6 @@
 package com.ferra13671.BThackPlugin;
 
-import com.ferra13671.BThack.api.Gui.MainMenu.SelectWallpaper.SelectWallpaperScreen;
+import com.ferra13671.BThack.api.GuiSystem.BThackScreens;
 import com.ferra13671.BThack.api.Managers.managers.Setting.Settings.*;
 import com.ferra13671.BThack.api.Module.PluginModule;
 import com.ferra13671.BThack.api.Utils.KeyboardUtils;
@@ -29,7 +29,7 @@ public class ExampleModule extends PluginModule {
         testMode = new ModeSetting("Mode", this, new ArrayList<>(Arrays.asList("Test1", "Test2", "Test3")));
         testSlider = new NumberSetting("Slider", this, 10, 1, 100, false);
         testKeyCode = new KeyCodeSetting("KeyCode", this);
-        testGuiButton = new GuiButtonSetting("GuiButton", this, SelectWallpaperScreen::new); //The screen that will be opened when the button is pressed
+        testGuiButton = new GuiButtonSetting("GuiButton", this, () -> BThackScreens.BTHACK_CREDITS); //The screen that will be opened when the button is pressed
 
         initSettings(
                 testBoolean,
